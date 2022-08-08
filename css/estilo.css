@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/Desktop-3D-Best-Windows-10-Wallpapers.jpg");
+    background-position: center;
+    background-size: cover;
+}
+header nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-around;
+    background-size: cover;
+    width: 100%;
+    padding: 10px 30px;
+   transition: .4s;  
+}
+nav .logo{
+     display: flex;
+     cursor: pointer;
+
+}
+nav .logo h2{
+    font-size: 30px;
+    font-family: 'mulish';
+    margin: 10px;
+}
+nav .logo img{
+    height: 60px;
+    cursor: pointer;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+     
+}
+nav ul li{
+    margin: 20px 10px;
+    position: relative;
+    
+}
+nav ul li a{
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'roboto medium';
+     transition: .4s;
+     border-radius: 6px;
+     font-size: 20px;
+}
+.active,
+nav ul li a:hover{
+ color: rebeccapurple;
+  
+}
+
+
+/* drop */
+nav ul li ul{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+    box-shadow: 0px 0px 4px #000;
+    width:100%;
+}
+nav ul li ul li {
+    width: 100%;
+    margin: 0;
+    /* background-color: rgba(0, 0, 0, 0.356); */
+    position: relative;
+   
+}
+nav ul li ul li a{
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+nav ul li ul li a:hover{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+/* nav ul li ul li:focus-within >ul, */
+nav ul li:focus-within >ul,
+nav ul  li:hover >ul{
+    display: block;
+}
+
+nav ul li ul li ul{
+    display: none;
+    position: absolute;
+    
+    left: 100%;
+}
+ nav ul li ul li:focus-within >ul,
+nav ul li ul li:hover >ul{
+    display: block;
+} 
+
+nav.show {
+ 
+    background-color: rgb(32, 31, 31);
+}
+nav.show ul li ul li {
+    background-color: rgb(32, 31, 31);
+     
+}
+nav.show ul li ul{
+    box-shadow: none;
+}
+nav.show ul li ul li a:hover{
+    background-color: rebeccapurple;
+    color: #fff;
+}
+nav.show .logo h2{
+    font-size: 40px;
+    color: #fff;
+}
